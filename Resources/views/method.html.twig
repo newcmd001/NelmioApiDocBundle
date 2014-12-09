@@ -71,12 +71,14 @@
                     </thead>
                     <tbody>
                         {% for name, infos in data.requirements %}
+                            <!--
                             <tr>
                                 <td>{{ name }}</td>
                                 <td>{{ infos.requirement is defined ? infos.requirement : ''}}</td>
                                 <td>{{ infos.dataType is defined ? infos.dataType : ''}}</td>
                                 <td>{{ infos.description is defined ? infos.description : ''}}</td>
                             </tr>
+                            -->
                         {% endfor %}
                     </tbody>
                 </table>
@@ -237,11 +239,11 @@
                                                 <option value="boolean">Boolean</option>
                                                 <option value="file">File</option>
                                             </select>
-                                            <input type="text" class="value" placeholder="{% if infos.dataType %}[{{ infos.dataType }}] {% endif %}{% if infos.format %}{{ infos.format }}{% endif %}{% if infos.description %}{{ infos.description }}{% else %}Value{% endif %}" {% if infos.default is defined %} value="{{ infos.default }}" {% endif %}/> <span class="remove">-</span>
+                                            <input type="text" class="value" placeholder="{% if infos.dataType %}[{{ infos.dataType }}] {% endif %}{% if infos.format %}{{ infos.format }}{% endif %}{% if infos.description %}{{ infos.description }}{% else %}Value{% endif %}" {% if infos.default is defined %} value="{{ infos.default }}" {% endif %}/> <!--<span class="remove">-</span>-->
                                         </p>
                                     {% endif %}
                                     {% endfor %}
-                                    <button type="button" class="add_parameter">New parameter</button>
+                                    <!--<button type="button" class="add_parameter">New parameter</button>-->
                                 {% endif %}
 
                             </fieldset>
